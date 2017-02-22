@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Skip to content
 This repository
 Search
@@ -16,6 +17,8 @@ Branch: master Find file Copy pathSynchronizedScrollViewTest/.gitignore
 1 contributor
 RawBlameHistory     
 41 lines (29 sloc)  465 Bytes
+=======
+>>>>>>> 5b20e3a7675fdd626763346bb30705fcc90ac4c2
 # Built application files
 *.apk
 *.ap_
@@ -56,5 +59,4 @@ captures/
 
 # Keystore files
 *.jks
-Contact GitHub API Training Shop Blog About
-© 2017 GitHub, Inc. Terms Privacy Security Status Help
+
