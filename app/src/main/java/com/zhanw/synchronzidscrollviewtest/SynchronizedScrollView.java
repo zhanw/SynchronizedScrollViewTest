@@ -65,6 +65,7 @@ public class SynchronizedScrollView extends ScrollView {
         super.onLayout(changed, l, t, r, b);
         //Calling this here attaches the views together if they were added
         // before layout finished
+        System.out.println("onLayout");
         syncViews();
     }
 
@@ -74,6 +75,11 @@ public class SynchronizedScrollView extends ScrollView {
         if(mAnchorView == null || mSyncView == null) {
             return;
         }
+
+        System.out.println("AnchorView getTop: " + mAnchorView.getTop() + ", SyncView.getTop" + mSyncView.getTop() + ", getScrollY: " + getScrollY());
+        // 往上滑时anchorview top是不变的，
+        // syncview top一开始不变，当anchorview移出屏幕时开始加大
+        // getScrollY()的值往上滑时正值，跟scrollTo()和scrollBy()类似，实际这两个方法最终改变的就是getScrollY()的值
 
         //Distance between the anchor view and the scroll position
         int matchDistance = mAnchorView.getTop() - getScrollY();
