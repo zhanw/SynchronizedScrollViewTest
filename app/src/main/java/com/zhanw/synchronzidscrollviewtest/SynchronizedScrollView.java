@@ -86,8 +86,8 @@ public class SynchronizedScrollView extends ScrollView {
         //Distance between scroll position and sync view
         int offset = getScrollY() - mSyncView.getTop();
         //Check if anchor is scrolled off screen
-        if(matchDistance < 0) {
-            mSyncView.offsetTopAndBottom(offset);
+        if(matchDistance < 0) { //超出屏幕，offset>0
+            mSyncView.offsetTopAndBottom(offset); //变动的是getTop和getBottom值，所以offset跟scrollBy()相反，往下是正值
         } else {
             syncViews();
         }
